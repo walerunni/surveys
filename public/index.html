@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./build/tailwind.css">
     <title>Surveys UI</title>
 
@@ -14,9 +17,11 @@
 
 <body class="font-primary bg-gray-200">
     <div class="w-full h-full">
-        <div class="w-full h-12 bg-white shadow px-12 py-4 flex justify-between">
+        <!-- navbar -->
+        <div class="w-full h-12 bg-white px-12 shadow py-4 flex justify-between">
             <div class="flex items-center gap-4">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="black" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="black"
+                    class="w-6 h-6 cursor-pointer transform hover:scale-105">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
                 <h2 class="text-lg text-gray-900 font-medium align-middle">Create Questionnaire</h2>
@@ -24,7 +29,28 @@
             <div class="flex gap-4 items-center">
                 <h2 class="font-medium text-gray-700">Eugene Ojiambo</h2>
                 <img src="https://s3.amazonaws.com/f6s-public/profiles/1355597_original.jpg" alt="Eugene Ojiambo"
-                    class="w-8 h-8 rounded-full cursor-pointer">
+                    class="w-8 h-8 rounded-full cursor-pointer transform hover:shadow">
+            </div>
+        </div>
+        <!-- search bar -->
+        <div class="w-full flex px-12 my-6">
+            <input
+                class="bg-white w-10/12 relative px-4 py-2 font-secondary text-gray-800 appearance-none rounded border-2 focus:outline-none focus:border-primary"
+                placeholder="Search for a questionnaire or form">
+            <div class="w-full md:w-1/4 px-3 bg-gray-200 mb-6 md:mb-0">
+                <div class="relative">
+                    <select
+                        class="block appearance-none w-full bg-white font-secondary cursor-pointer border-2 border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-primary"
+                        id="grid-state">
+                        <option>Filters</option>
+
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
