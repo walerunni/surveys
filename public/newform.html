@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./build/tailwind.css">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Surveys UI</title>
+
+</head>
+
+<body class="font-primary bg-gray-200">
+    <div class="w-full h-full" id="form-root">
+        <!-- navbar -->
+        <div class="w-full h-12 bg-white px-12 shadow py-4 flex justify-between">
+            <div class="flex items-center gap-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" stroke="black"
+                    class="w-6 h-6 cursor-pointer transform hover:scale-105">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <h2 class="text-lg text-gray-900 font-medium align-middle">Create Questionnaire</h2>
+            </div>
+            <div class="flex gap-4 items-center">
+                <h2 class="font-medium text-gray-700">Eugene Ojiambo</h2>
+                <img src="https://s3.amazonaws.com/f6s-public/profiles/1355597_original.jpg" alt="Eugene Ojiambo"
+                    class="w-8 h-8 rounded-full cursor-pointer transform hover:shadow">
+            </div>
+        </div>
+
+        <!--Questionnaire form-->
+
+        <div class="w-1/2 bg-white rounded-lg mx-auto shadow my-12 px-10 py-8">
+            <h2 class="text-gray-600 font-medium">Form Title</h2>
+            <input class="w-full border-2 rounded py-2 mt-1 mb-2 px-4 focus:border-primary">
+
+            <h2 class="mt-4 mb-1 text-gray-600 font-medium">Form Description</h2>
+            <textarea class="w-full rounded border-2" rows="4"></textarea>
+        </div>
+
+        <!--Question 1-->
+        <div class="w-1/2 bg-white rounded-lg shadow mx-auto my-12 px-10 py-8 ">
+            <div class="flex justify-between">
+                <div class="flex items-center gap-2">
+                    <h2 class="text-gray-500">Question 01:</h2>
+                    <div class="relative">
+                        <select
+                            class="block appearance-none w-full bg-gray-100 text-primary font-semibold py-2 px-4 pr-8 rounded leading-tight focus:outline-none focus:border-gray-500">
+                            <option v-for="choice in choices">{{ choice }}</option>
+                        </select>
+                        <div
+                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-gray-500">Required</span>
+                    <div
+                        class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+                        <input type="checkbox" name="toggle" id="toggle"
+                            class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white appearance-none cursor-pointer" />
+                        <label for="toggle"
+                            class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="my-4">
+                <input class="w-full bg-gray-200 px-4 py-2 outline-none border-2 placeholder-gray-500 focus:bg-white focus:border-primary" placeholder="How to set up a questionnaire">
+            </div>
+        </div>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

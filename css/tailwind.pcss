@@ -4,4 +4,12 @@
 .card {
   @apply bg-white shadow rounded-lg px-4 py-3;
 }
+.toggle-checkbox:checked {
+  @apply: right-0;
+  right: 0;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #03a9f4;
+}
 @tailwind utilities;
